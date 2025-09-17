@@ -1,0 +1,1442 @@
+[
+  {
+    "role": "user",
+    "text": "Hej! Jag heter Anna och jag lära svenska för tre månar."
+  },
+  {
+    "role": "assistant",
+    "content": "Hej Anna! Vad roligt att du lär dig svenska. Tre månader är en bra start – du har säkert redan lärt dig mycket. Har du någon favoritdel av språket?\n\nKorrigeringar:\n- \"jag lära svenska\" → jag lär mig svenska (reflexivt verb).\n- \"tre månar\" → tre månader (rätt ord).\n- \"för tre månader\" → i tre månader (rätt preposition)."
+  },
+  {
+    "role": "user",
+    "text": "Idag jag gick till butik och köpte äpple och bröder."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter gott! Äpplen och bröd är en klassiker. Brukar du handla ofta på den butiken?\n\nKorrigeringar:\n- \"Idag jag gick\" → Idag gick jag (verb på andra plats).\n- \"äpple\" → äpplen (plural).\n- \"bröder\" → bröd (fel ord, bröder = brothers)."
+  },
+  {
+    "role": "user",
+    "text": "Min favorit färg är blå, men jag tycker också om gul."
+  },
+  {
+    "role": "assistant",
+    "content": "Blå är jättefin! Och gult är verkligen en glad färg. Tycker du om att ha färgglada kläder?\n\nKorrigeringar:\n- \"favorit färg\" → favoritfärg (ett ord).\n- \"gul\" → gult (neutrumform)."
+  },
+  {
+    "role": "user",
+    "text": "Jag är trött igår, så jag sova tidlig."
+  },
+  {
+    "role": "assistant",
+    "content": "Förstår dig! Ibland är det skönt att lägga sig tidigt. Sov du bra?\n\nKorrigeringar:\n- \"Jag är trött igår\" → Jag var trött igår (preteritum).\n- \"sova tidlig\" → sov tidigt (preteritum + korrekt adverb)."
+  },
+  {
+    "role": "user",
+    "text": "Jag har två kattar hemma, dom är svart."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, vad mysigt! Katter är underbara sällskap. Vad heter de?\n\nKorrigeringar:\n- \"kattar\" → katter (fel plural).\n- \"dom är svart\" → de är svarta (kongruens i plural)."
+  },
+  {
+    "role": "user",
+    "text": "Igår vi åkte till stranden och simmade i sjö."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter som en härlig dag! Var vattnet varmt?\n\nKorrigeringar:\n- \"Igår vi åkte\" → Igår åkte vi (verb på andra plats).\n- \"simmade i sjö\" → simmade i en sjö (obestämd artikel behövs)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill resa till Sverige nästa sommar för att träffa nya personer och pratar svenska."
+  },
+  {
+    "role": "assistant",
+    "content": "Vilken bra idé! Att resa dit är ett fantastiskt sätt att öva språket. Finns det någon stad du särskilt vill besöka?\n\nKorrigeringar:\n- \"pratar svenska\" → prata svenska (infinitiv efter \"för att\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag gick till skolan men jag glömde mina bokar hemma."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj då! Det händer oss alla ibland. Kunde du ändå följa lektionen?\n\nKorrigeringar:\n- \"bokar\" → böcker (fel plural)."
+  },
+  {
+    "role": "user",
+    "text": "Hon tycker om spela fotboll och hon spelar varje helg."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad kul! Fotboll är väldigt populärt i Sverige också. Spelar du själv?\n\nKorrigeringar:\n- \"tycker om spela\" → tycker om att spela (infinitiv kräver \"att\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag äter frukost nu: kaffe, bröd och ost smörgås."
+  },
+  {
+    "role": "assistant",
+    "content": "Mums! Det låter som en typiskt svensk frukost. Dricker du alltid kaffe på morgonen?\n\nKorrigeringar:\n- \"ost smörgås\" → ostsmörgås (ett ord)."
+  },
+  {
+    "role": "user",
+    "text": "Vi går på bio igår och såg en bra film."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, spännande! Vilken film såg ni?\n\nKorrigeringar:\n- \"Vi går på bio igår\" → Vi gick på bio igår (preteritum)."
+  },
+  {
+    "role": "user",
+    "text": "Min syster är längre än mig och hon spela piano mycket bra."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad fint! Musik är en härlig talang. Brukar du lyssna när hon spelar?\n\nKorrigeringar:\n- \"mig\" → jag i jämförelser.\n- \"hon spela\" → hon spelar (nutid)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker att svensk vinter är väldigt kallt men också vackra."
+  },
+  {
+    "role": "assistant",
+    "content": "Ja, vintern kan vara både kall och vacker. Har du provat åka skidor någon gång?\n\nKorrigeringar:\n- \"väldigt kallt\" → väldigt kall (det syftar på \"vinter\" = en-ord).\n- \"vackra\" → vacker (ingen plural här)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill köpa en ny jacka men jag har inte mycket pengar nu."
+  },
+  {
+    "role": "assistant",
+    "content": "Jag förstår! Kanske hittar du en bra rea snart. Tycker du om varma eller tunna jackor?\n\nKorrigeringar:\n- Inga större fel – mycket bra skrivet!"
+  },
+  {
+    "role": "user",
+    "text": "På helgen jag brukar städa huset och sedan gå till marknad."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter produktivt! Brukar du köpa något speciellt på marknaden?\n\nKorrigeringar:\n- \"På helgen jag brukar\" → På helgen brukar jag (verb på andra plats).\n- \"marknad\" → marknaden (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag ser en film igår kväll, den var mycket intressant."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad roligt! Vilken film var det?\n\nKorrigeringar:\n- \"Jag ser en film igår kväll\" → Jag såg en film igår kväll (preteritum)."
+  },
+  {
+    "role": "user",
+    "text": "När jag var barn, jag spela ofta ute i regnet."
+  },
+  {
+    "role": "assistant",
+    "content": "Vilket härligt minne! Tyckte du om regn?\n\nKorrigeringar:\n- \"När jag var barn, jag spela\" → När jag var barn spelade jag (ordföljd + preteritum)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill öva mitt svenska varje dag men ibland jag glömmer."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är helt normalt! Du gör ändå framsteg. Har du några knep för att komma ihåg att öva?\n\nKorrigeringar:\n- \"mitt svenska\" → min svenska (svenska = en-ord).\n- \"ibland jag glömmer\" → ibland glömmer jag (verb på andra plats)."
+  },
+  {
+    "role": "user",
+    "text": "Kan du hjälp mig att förstå skillnaden mellan \"de\" och \"dem\"?"
+  },
+  {
+    "role": "assistant",
+    "content": "Självklart! \"De\" används som subjekt, till exempel *De äter äpplen*. \"Dem\" används som objekt, till exempel *Jag såg dem igår*. Vill du att jag gör fler exempel?\n\nKorrigeringar:\n- \"hjälp mig\" → hjälpa mig (infinitivform)."
+  },
+  {
+    "role": "user",
+    "text": "Jag gillar lyssna musik när jag gå till jobbet."
+  },
+  {
+    "role": "assistant",
+    "content": "Samma här! Musik gör resan mycket roligare. Vad för musik lyssnar du på?\n\nKorrigeringar:\n- \"gillar lyssna\" → gillar att lyssna (infinitiv kräver \"att\").\n- \"när jag gå\" → när jag går (nutid)."
+  },
+  {
+    "role": "user",
+    "text": "Jag åkte buss till stan men glömde köpa biljett."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj då! Hoppas du inte fick problem. Brukar du oftast åka buss eller tåg?\n\nKorrigeringar:\n- Inga stora fel, men du kan säga \"glömde att köpa biljett\" för mer korrekt uttryck."
+  },
+  {
+    "role": "user",
+    "text": "Min bror gillar spela dataspel varje kväll."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är vanligt! Har du något favoritspel också?\n\nKorrigeringar:\n- \"gillar spela\" → gillar att spela (infinitiv kräver \"att\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker om fika med mina vänner på eftermiddagen."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter mysigt! Fika är en så trevlig tradition. Vad brukar ni dricka?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vill läsa en bok, men jag har inte tid nu."
+  },
+  {
+    "role": "assistant",
+    "content": "Det känner jag igen! Vilken bok vill du läsa?\n\nKorrigeringar:\n- Inga fel – jättebra skrivet!"
+  },
+  {
+    "role": "user",
+    "text": "Vi åt middag i restaurang igår."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, trevligt! Vad åt ni?\n\nKorrigeringar:\n- \"i restaurang\" → på en restaurang (rätt preposition och artikel)."
+  },
+  {
+    "role": "user",
+    "text": "Jag har en cykel, men jag cyklar inte ofta eftersom det är kall."
+  },
+  {
+    "role": "assistant",
+    "content": "Förståeligt! Vintern kan göra det svårt. Brukar du cykla mer på sommaren?\n\nKorrigeringar:\n- \"det är kall\" → det är kallt (adverbform)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker om att gå på museum och se konst."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Har du ett favoritmuseum?\n\nKorrigeringar:\n- Inga fel – bra jobbat!"
+  },
+  {
+    "role": "user",
+    "text": "På morgon jag dricker te och äter smörgåsar."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter gott! Föredrar du te framför kaffe?\n\nKorrigeringar:\n- \"På morgon\" → På morgonen (bestämd form).\n- \"På morgon jag dricker\" → På morgonen dricker jag (verb på andra plats)."
+  },
+  {
+    "role": "user",
+    "text": "Jag måste plugga mycket för min examen nästa månad."
+  },
+  {
+    "role": "assistant",
+    "content": "Lycka till! Jag är säker på att du klarar det. Vad pluggar du för ämne?\n\nKorrigeringar:\n- Inga fel – mycket bra skrivet!"
+  },
+  {
+    "role": "user",
+    "text": "Vi spelar fotboll i park varje lördag."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad kul! Är det med vänner eller i ett lag?\n\nKorrigeringar:\n- \"i park\" → i parken (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg en intressant dokumentär om naturen på TV igår kväll."
+  },
+  {
+    "role": "assistant",
+    "content": "Spännande! Vad handlade den om?\n\nKorrigeringar:\n- Inga fel – bra jobbat!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vill lära mer ord på svenska."
+  },
+  {
+    "role": "assistant",
+    "content": "Jättebra! Vi kan öva tillsammans. Vill du lära vardagsord eller mer avancerade?\n\nKorrigeringar:\n- \"lära mer ord\" → lära mig fler ord (reflexivt verb + fler istället för mer)."
+  },
+  {
+    "role": "user",
+    "text": "Jag går till gym imorgon."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Tränar du ofta?\n\nKorrigeringar:\n- \"till gym\" → till gymmet (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Hon vill köpa nya skor för hon gillar gå ut och promenerar."
+  },
+  {
+    "role": "assistant",
+    "content": "Låter bra! Promenader är ett härligt sätt att koppla av. Vilken färg vill hon ha på skorna?\n\nKorrigeringar:\n- \"för hon gillar\" → eftersom hon gillar (mer naturligt).\n- \"gillar gå ut och promenerar\" → gillar att gå ut och promenera (infinitiv)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tittar på en film nu men jag ska sova sen."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Hoppas filmen är bra. Godnatt i förväg!\n\nKorrigeringar:\n- Inga fel – fint skrivet!"
+  },
+  {
+    "role": "user",
+    "text": "Vi reste till Norge förra året och det var mycket fin."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, Norge är vackert! Vilken stad besökte ni?\n\nKorrigeringar:\n- \"mycket fin\" → mycket fint (adverbform)."
+  },
+  {
+    "role": "user",
+    "text": "Jag brukar läser en bok innan jag går till säng."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är en fin vana! Vad läser du just nu?\n\nKorrigeringar:\n- \"brukar läser\" → brukar läsa (infinitiv efter brukar).\n- \"till säng\" → till sängen (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Han är sjuk så han kan inte går till jobbet idag."
+  },
+  {
+    "role": "assistant",
+    "content": "Stackars honom! Hoppas han blir frisk snart.\n\nKorrigeringar:\n- \"kan inte går\" → kan inte gå (infinitiv)."
+  },
+  {
+    "role": "user",
+    "text": "Jag köpte en ny telefon igår, den är mycket snabbt."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad kul! Är det en smartphone?\n\nKorrigeringar:\n- \"mycket snabbt\" → mycket snabb (adjektiv för en-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Jag dricka te varje morgon för att vakna bättre."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter mysigt! Te kan verkligen ge en bra start på dagen. Har du någon favoritsmak?\n\nKorrigeringar:\n- \"dricka\" → dricker (nutid)."
+  },
+  {
+    "role": "user",
+    "text": "Vi planerar att åka till Stockholm i nästa månad."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad spännande! Stockholm har mycket att erbjuda. Ska ni stanna länge?\n\nKorrigeringar:\n- \"i nästa månad\" → nästa månad (utan \"i\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag gillar promenera i skog, det är lugna."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad härligt! Skogen är verkligen en lugn plats. Brukar du promenera ofta?\n\nKorrigeringar:\n- \"det är lugna\" → det är lugnt (neutrumform, ej plural)."
+  },
+  {
+    "role": "user",
+    "text": "Min mamma lagade middag igår, hon gör köttbullar och potatis."
+  },
+  {
+    "role": "assistant",
+    "content": "Mums, köttbullar med potatis är en klassiker! Tyckte du det var gott?\n\nKorrigeringar:\n- \"hon gör köttbullar\" → hon gjorde köttbullar (båda verben i preteritum)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill köpa nya skor, men de är väldigt dyr."
+  },
+  {
+    "role": "assistant",
+    "content": "Jag förstår, skor kan vara dyra ibland. Har du hittat ett par du verkligen gillar?\n\nKorrigeringar:\n- \"de är väldigt dyr\" → de är väldigt dyra (plural)."
+  },
+  {
+    "role": "user",
+    "text": "Igår jag träffade min vän och vi prata länge."
+  },
+  {
+    "role": "assistant",
+    "content": "Så fint! Det är alltid trevligt att prata länge med en vän. Vad pratade ni om?\n\nKorrigeringar:\n- \"Igår jag träffade\" → Igår träffade jag (verb på andra plats).\n- \"vi prata\" → vi pratade (preteritum)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker om läsa böcker, speciellt mysterium."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, mysterieböcker är spännande! Har du en favoritförfattare?\n\nKorrigeringar:\n- \"tycker om läsa\" → tycker om att läsa (infinitiv kräver \"att\").\n- \"mysterium\" → mysterier (plural)."
+  },
+  {
+    "role": "user",
+    "text": "Kan du säga mig vad skillnaden mellan 'var' och 'vart' är?"
+  },
+  {
+    "role": "assistant",
+    "content": "Självklart! \"Var\" används när man pratar om plats (*Var är du?*), och \"vart\" används när man pratar om riktning (*Vart går du?*). Vill du ha fler exempel?\n\nKorrigeringar:\n- \"säga mig\" → säga till mig (korrekt uttryck)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg en intressant program på tv igår kväll."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad kul! Vad handlade programmet om?\n\nKorrigeringar:\n- \"en intressant program\" → ett intressant program (program = ett-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Vi går alltid till park när vädret är soligt."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter mysigt! Att vara i parken en solig dag är underbart. Har ni en favoritpark?\n\nKorrigeringar:\n- \"till park\" → till parken (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag hoppas att jag kan besöka Sverige snart och öva svenska med riktiga personer."
+  },
+  {
+    "role": "assistant",
+    "content": "Det vore fantastiskt! Svenskar brukar vara vänliga och många tycker det är roligt att höra någon öva. Lycka till!\n\nKorrigeringar:\n- \"riktiga personer\" → riktiga människor (naturligare ordval)."
+  },
+  {
+    "role": "user",
+    "text": "Min bror jobba på en restaurang i centrum."
+  },
+  {
+    "role": "assistant",
+    "content": "Spännande! Jobbar han som kock eller servitör?\n\nKorrigeringar:\n- \"jobba\" → jobbar (nutid)."
+  },
+  {
+    "role": "user",
+    "text": "Jag gick ute utan jacka och det var mycket kall."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj, det låter kyligt! Hoppas du inte blev förkyld.\n\nKorrigeringar:\n- \"ute\" → ut (rörelse, inte plats).\n- \"mycket kall\" → mycket kallt (neutrumform)."
+  },
+  {
+    "role": "user",
+    "text": "Jag skriver ett brev till min vän i Sverige imorgon."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad fint! Brev är ett personligt sätt att hålla kontakten. Vad ska du berätta för din vän?\n\nKorrigeringar:\n- \"imorgon\" → ska skriva imorgon (verbets tid bör anpassas)."
+  },
+  {
+    "role": "user",
+    "text": "Vi hade en roligt fest förra veckan."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, vad härligt! Vad gjorde ni på festen?\n\nKorrigeringar:\n- \"en roligt fest\" → en rolig fest (fest = en-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill laga mat bättre, jag ser ofta recept på internet."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är en bra idé! Internet har massor av bra recept. Vad tycker du om att laga mest?\n\nKorrigeringar:\n- \"jag ser ofta recept\" → jag tittar ofta på recept (bättre uttryck)."
+  },
+  {
+    "role": "user",
+    "text": "På morgonen jag brukar dricka kaffe och läsa nyheter."
+  },
+  {
+    "role": "assistant",
+    "content": "Vilken bra rutin! Det är trevligt att starta dagen så. Läser du nyheterna på svenska?\n\nKorrigeringar:\n- \"På morgonen jag brukar\" → På morgonen brukar jag (verb på andra plats)."
+  },
+  {
+    "role": "user",
+    "text": "Jag gick till biblioteket men det var stängt så jag var ledsamt."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh nej! Hoppas du kan gå dit en annan dag. Tycker du om att läsa där?\n\nKorrigeringar:\n- \"jag var ledsamt\" → jag var ledsen (fel form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker svensk mat är gott, särskilt köttbullar och sill."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Det är verkligen klassiska svenska rätter. Har du smakat gravad lax?\n\nKorrigeringar:\n- \"svensk mat är gott\" → svensk mat är god (en-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Min vän bor nära mig, vi träffas nästan varje dag."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad fint! Det är roligt att ha en vän så nära. Vad brukar ni göra tillsammans?\n\nKorrigeringar:\n- Inga fel – bra skrivet!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vill spela gitarr, men jag kan inte spela inga instrument."
+  },
+  {
+    "role": "assistant",
+    "content": "Gitarr är ett jättefint instrument! Vill du ta lektioner?\n\nKorrigeringar:\n- \"inte spela inga instrument\" → inte spela något instrument (dubbel negation fel)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg på tv igår, det var ett dokumentär."
+  },
+  {
+    "role": "assistant",
+    "content": "Intressant! Vad handlade dokumentären om?\n\nKorrigeringar:\n- \"ett dokumentär\" → en dokumentär (dokumentär = en-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Vi åt middag ute och det var mycket trevliga."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, mysigt! Vad åt ni?\n\nKorrigeringar:\n- \"mycket trevliga\" → mycket trevligt (neutrumform)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill köpa en bok som handlar om svenska historia."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter spännande! Svensk historia är full av intressanta händelser. Har du någon epok du gillar mest?\n\nKorrigeringar:\n- \"svenska historia\" → svensk historia (adjektivets form)."
+  },
+  {
+    "role": "user",
+    "text": "När jag var i skolan, jag inte gillade matematik."
+  },
+  {
+    "role": "assistant",
+    "content": "Många känner likadant! Tyckte du om något annat ämne mer?\n\nKorrigeringar:\n- \"När jag var i skolan, jag inte gillade\" → När jag var i skolan gillade jag inte (ordföljd)."
+  },
+  {
+    "role": "user",
+    "text": "Jag går till affären nu, vill du något?"
+  },
+  {
+    "role": "assistant",
+    "content": "Tack, vad snällt! Men jag behöver inget just nu. Vad ska du köpa?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Min pappa körde till arbete varje dag med cykel."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj, det låter som bra motion! Tycker han om att cykla?\n\nKorrigeringar:\n- \"till arbete\" → till arbetet (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker att svenska är svårt språk men också intressant."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är en bra inställning! Språket blir lättare med övning. Vad tycker du är svårast?\n\nKorrigeringar:\n- \"svårt språk\" → ett svårt språk (obestämd artikel behövs)."
+  },
+  {
+    "role": "user",
+    "text": "Jag var sjuk förra vecka, så jag stannade hemma."
+  },
+  {
+    "role": "assistant",
+    "content": "Stackare! Hoppas du mår bättre nu.\n\nKorrigeringar:\n- \"förra vecka\" → förra veckan (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Vi gillar att titta på fotboll matcher på tv."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Har du något favoritlag?\n\nKorrigeringar:\n- \"fotboll matcher\" → fotbollsmatcher (ett ord)."
+  },
+  {
+    "role": "user",
+    "text": "Jag ska gå till sängs tidig ikväll."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter som en bra idé! Vila är viktigt. Sov gott!\n\nKorrigeringar:\n- \"till sängs tidig\" → till sängs tidigt (adverb)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg en liten hund som sprang snabbt över gatan igår."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, vad gulligt! Var den ensam?\n\nKorrigeringar:\n- Inga fel – jättebra!"
+  },
+  {
+    "role": "user",
+    "text": "Min väns bil är trasigt, så han måste reparera det."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj då! Bilar kan vara krångliga ibland. Vet du vad som är fel med den?\n\nKorrigeringar:\n- \"är trasigt\" → är trasig (bil = en-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker att svenska filmer är roligt."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad kul! Har du sett någon bra svensk film nyligen?\n\nKorrigeringar:\n- \"är roligt\" → är roliga (plural)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vaknade sent idag för att min väckarklocka inte ringde."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh nej! Hoppas du inte blev försenad. Brukar det hända ofta?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vill gå på konserten men biljetterna var slutsålda."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad synd! Kanske kan du gå nästa gång. Vilken artist var det?\n\nKorrigeringar:\n- Inga fel – riktigt bra skrivet!"
+  },
+  {
+    "role": "user",
+    "text": "Vi gick till restaurangen och åt fisk, det smakade mycket bra."
+  },
+  {
+    "role": "assistant",
+    "content": "Mums! Fisk är populärt i Sverige. Äter du fisk ofta?\n\nKorrigeringar:\n- \"mycket bra\" → mycket gott (om smak)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill lära hur man kör bil i Sverige."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är en bra idé! Svensk trafik är ganska ordnad. Har du kört i ditt hemland?\n\nKorrigeringar:\n- \"lära hur man kör\" → lära mig hur man kör (reflexivt verb)."
+  },
+  {
+    "role": "user",
+    "text": "Min lärare sa att vi måste läsa två kapitel imorgon."
+  },
+  {
+    "role": "assistant",
+    "content": "Okej, då har du lite att göra! Tycker du att boken är intressant?\n\nKorrigeringar:\n- \"läsa två kapitel imorgon\" → läsa två kapitel till imorgon (bättre uttryck)."
+  },
+  {
+    "role": "user",
+    "text": "Jag sprang till buss men den åkte bort."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh nej, det är alltid stressigt att missa bussen. Fick du vänta länge på nästa?\n\nKorrigeringar:\n- \"till buss\" → till bussen (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill studera medicin när jag blir vuxen."
+  },
+  {
+    "role": "assistant",
+    "content": "Vilken fin dröm! Det är ett viktigt yrke. Vill du bli läkare?\n\nKorrigeringar:\n- Inga fel – bra!"
+  },
+  {
+    "role": "user",
+    "text": "Vi spelade fotboll igår kväll och det var mycket roligt."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Fotboll är en bra aktivitet. Vann ditt lag?\n\nKorrigeringar:\n- Inga fel – perfekt!"
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker kaffe är bättre än te, vad tycker du?"
+  },
+  {
+    "role": "assistant",
+    "content": "Jag gillar båda! Men kaffe är nog min favorit på morgonen. Dricker du starkt kaffe?\n\nKorrigeringar:\n- \"Jag tycker kaffe är\" → Jag tycker att kaffe är (bättre med \"att\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag var i biblioteket igår men jag hittade inte den bok jag sökte."
+  },
+  {
+    "role": "assistant",
+    "content": "Tråkigt! Kanske kan du beställa den boken via biblioteket. Brukar du läsa ofta?\n\nKorrigeringar:\n- \"den bok\" → den boken (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Vi reste till Danmark förra år."
+  },
+  {
+    "role": "assistant",
+    "content": "Spännande! Vad gjorde ni där?\n\nKorrigeringar:\n- \"förra år\" → förra året (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill lära mer om svenska traditioner."
+  },
+  {
+    "role": "assistant",
+    "content": "Kul! Traditioner är en viktig del av kulturen. Har du hört talas om midsommar?\n\nKorrigeringar:\n- \"lära mer\" → lära mig mer (reflexivt verb)."
+  },
+  {
+    "role": "user",
+    "text": "Jag köpte en ny telefon men jag glömde ladda den."
+  },
+  {
+    "role": "assistant",
+    "content": "Haha, det händer lätt! Är du nöjd med den nya telefonen?\n\nKorrigeringar:\n- \"glömde ladda den\" → glömde att ladda den (bättre uttryck)."
+  },
+  {
+    "role": "user",
+    "text": "Jag brukar spela datorspel på kvällarna."
+  },
+  {
+    "role": "assistant",
+    "content": "Roligt! Vad för slags spel tycker du bäst om?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Min syster är väldigt snäll och hon hjälp mig ofta."
+  },
+  {
+    "role": "assistant",
+    "content": "Så fint! Det är härligt med en hjälpsam syster. Är hon äldre eller yngre än du?\n\nKorrigeringar:\n- \"hon hjälp mig\" → hon hjälper mig (nutid)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill simma i havet men det är för kallt nu."
+  },
+  {
+    "role": "assistant",
+    "content": "Ja, havet kan vara riktigt kallt! Brukar du simma på sommaren?\n\nKorrigeringar:\n- Inga fel – bra skrivet!"
+  },
+  {
+    "role": "user",
+    "text": "Vi hade mycket rolig när vi var på festen."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad kul! Fester kan ge många fina minnen. Vad gjorde ni där?\n\nKorrigeringar:\n- \"mycket rolig\" → mycket roligt (adverb)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg snö för första gången i vintern."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, vad härligt! Snö är speciellt första gången man ser det. Vad tyckte du?\n\nKorrigeringar:\n- \"i vintern\" → i vinter (rätt form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag måste plugga hård för examen."
+  },
+  {
+    "role": "assistant",
+    "content": "Lycka till! Jag är säker på att det går bra. Vad pluggar du för ämne?\n\nKorrigeringar:\n- \"hård\" → hårt (adverb)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill köpa en biljett till tågen imorgon."
+  },
+  {
+    "role": "assistant",
+    "content": "Bra idé! Vart ska du åka?\n\nKorrigeringar:\n- \"tågen\" → tåget (bestämd singular)."
+  },
+  {
+    "role": "user",
+    "text": "Jag känner trött eftersom jag inte sov bra."
+  },
+  {
+    "role": "assistant",
+    "content": "Stackare! Hoppas du kan vila snart. Brukar du sova bra annars?\n\nKorrigeringar:\n- \"Jag känner trött\" → Jag känner mig trött (reflexivt)."
+  },
+  {
+    "role": "user",
+    "text": "Vi gick till en museum igår."
+  },
+  {
+    "role": "assistant",
+    "content": "Spännande! Vad såg ni där?\n\nKorrigeringar:\n- \"en museum\" → ett museum (ett-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Jag gillar svenska musik, särskilt pop."
+  },
+  {
+    "role": "assistant",
+    "content": "Kul! Svensk pop är väldigt känd internationellt. Har du en favoritartist?\n\nKorrigeringar:\n- \"svenska musik\" → svensk musik (rätt form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag var hungrig så jag åt en smörgås med ost och tomat."
+  },
+  {
+    "role": "assistant",
+    "content": "Mums! Det låter gott. Gillar du också att laga mat själv?\n\nKorrigeringar:\n- Inga fel – perfekt!"
+  },
+  {
+    "role": "user",
+    "text": "Han går till arbete varje morgon med cykel."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter nyttigt! Cykling är bra motion. Hur långt är det till arbetet?\n\nKorrigeringar:\n- \"till arbete\" → till arbetet (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg en film som var tråkigt."
+  },
+  {
+    "role": "assistant",
+    "content": "Aj då, vilken film var det? Hoppas nästa blir bättre!\n\nKorrigeringar:\n- \"var tråkigt\" → var tråkig (syftar på filmen = en-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Min vän och jag spelar basket varje helgen."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad kul! Sport är bra träning. Är du bra på basket?\n\nKorrigeringar:\n- \"varje helgen\" → varje helg (obestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill åka till fjällen för att se midnattssol."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter fantastiskt! Midnattssolen är magisk. Har du varit i norra Sverige tidigare?\n\nKorrigeringar:\n- \"se midnattssol\" → se midnattssolen (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag skrev ett brev men jag skickade inte det än."
+  },
+  {
+    "role": "assistant",
+    "content": "Spännande! Vem ska få brevet?\n\nKorrigeringar:\n- \"skickade inte det än\" → har inte skickat det än (perfekt)."
+  },
+  {
+    "role": "user",
+    "text": "Jag brukar gå till gym varje vecka."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Tränar du styrka eller kondition mest?\n\nKorrigeringar:\n- \"till gym\" → till gymmet (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Han var sen till mötet för att han missade bussen."
+  },
+  {
+    "role": "assistant",
+    "content": "Ja, det händer lätt. Kom han fram i tid ändå?\n\nKorrigeringar:\n- \"för att han missade\" → eftersom han missade (bättre orsakssamband)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill bo i ett liten stad nära havet."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter mysigt! Havet gör livet lugnare. Gillar du att simma?\n\nKorrigeringar:\n- \"ett liten stad\" → en liten stad (en-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Vi såg många fåglar i parken, de sjungde vackra."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad fint! Fågelsång är så härlig. Vilka fåglar såg du?\n\nKorrigeringar:\n- \"sjungde vackra\" → sjöng vackert (preteritum + adverb)."
+  },
+  {
+    "role": "user",
+    "text": "Jag måste göra mina läxor innan jag kan spela tv-spel."
+  },
+  {
+    "role": "assistant",
+    "content": "Bra disciplin! Vad har du för läxor idag?\n\nKorrigeringar:\n- Inga fel – utmärkt!"
+  },
+  {
+    "role": "user",
+    "text": "Jag köpte en bok igår men jag läste bara några sidor."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är bra att börja lite i taget! Vad handlar boken om?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Min hund älskar springa i parken."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, så gulligt! Vad heter din hund?\n\nKorrigeringar:\n- \"älskar springa\" → älskar att springa (man behöver \"att\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill åka till Spanien nästa sommar."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter härligt! Gillar du sol och bad?\n\nKorrigeringar:\n- Inga fel – jättebra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag skrev en lång uppsats men läraren var inte nöjd."
+  },
+  {
+    "role": "assistant",
+    "content": "Tråkigt! Kanske kan du fråga vad du kan förbättra. Vad handlade uppsatsen om?\n\nKorrigeringar:\n- Inga fel – bra skrivet!"
+  },
+  {
+    "role": "user",
+    "text": "Vi gick på bio och såg en väldigt intressant film."
+  },
+  {
+    "role": "assistant",
+    "content": "Kul! Vad hette filmen?\n\nKorrigeringar:\n- Inga fel – utmärkt!"
+  },
+  {
+    "role": "user",
+    "text": "Jag glömde mina nycklar hemma så jag kunde inte komma in."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj då! Hur löste du det?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag träffade min vän igår och vi pratade många timmar."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad fint! Det är alltid trevligt att prata länge. Vad pratade ni om?\n\nKorrigeringar:\n- \"pratade många timmar\" → pratade i många timmar (korrekt uttryck)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill äta glass men det är för kall ute."
+  },
+  {
+    "role": "assistant",
+    "content": "Haha, glass kan man äta året runt! Vilken smak gillar du mest?\n\nKorrigeringar:\n- \"för kall ute\" → för kallt ute (adverb)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg en katt som jag tror den var hemlös."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, stackars katt! Gav du den mat?\n\nKorrigeringar:\n- \"som jag tror den var\" → som jag tror var (utan \"den\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker att svenska är en svårt språk."
+  },
+  {
+    "role": "assistant",
+    "content": "Det kan kännas svårt i början, men du blir bättre hela tiden! Tycker du grammatiken eller uttalet är svårast?\n\nKorrigeringar:\n- \"en svårt språk\" → ett svårt språk (ett-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Vi åkte till stranden och badade hela dagen."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, vad härligt! Var det varmt i vattnet?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag glömde köpa mjölk när jag var i affären."
+  },
+  {
+    "role": "assistant",
+    "content": "Det händer ofta! Vad köpte du istället?\n\nKorrigeringar:\n- Inga fel – bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vill lyssna svenska radio varje morgon."
+  },
+  {
+    "role": "assistant",
+    "content": "Bra idé! Radio är ett bra sätt att öva på språket. Har du en favoritkanal?\n\nKorrigeringar:\n- \"lyssna svenska radio\" → lyssna på svensk radio (korrekt preposition och form)."
+  },
+  {
+    "role": "user",
+    "text": "Min familj bor i ett litet hus nära skogen."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad mysigt! Brukar ni promenera i skogen?\n\nKorrigeringar:\n- Inga fel – perfekt!"
+  },
+  {
+    "role": "user",
+    "text": "Jag skrev ett brev till min vän men hon har inte svarat."
+  },
+  {
+    "role": "assistant",
+    "content": "Kanske får du svar snart! Vad skrev du om?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag är rädd från mörkret."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är vanligt! Många känner så. Vad gör du för att känna dig trygg?\n\nKorrigeringar:\n- \"rädd från\" → rädd för (rätt preposition)."
+  },
+  {
+    "role": "user",
+    "text": "Jag måste laga middag nu för min syster kommer snart."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad kul! Vad ska du laga?\n\nKorrigeringar:\n- Inga fel – riktigt bra!"
+  },
+  {
+    "role": "user",
+    "text": "Vi reste med tåg till Göteborg förra helg."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Vad gjorde ni i Göteborg?\n\nKorrigeringar:\n- \"förra helg\" → förra helgen (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill spela piano men jag har inte en piano."
+  },
+  {
+    "role": "assistant",
+    "content": "Piano är ett vackert instrument! Brukar du spela musik?\n\nKorrigeringar:\n- \"en piano\" → ett piano (ett-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Jag var mycket glad igår eftersom jag träffade min gamla vän."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, vad fint! Hur länge har ni känt varandra?\n\nKorrigeringar:\n- Inga fel – superbra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag tappade min telefon i golvet."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj då! Gick den sönder?\n\nKorrigeringar:\n- \"i golvet\" → på golvet (rätt preposition)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker att regn är mysigt när jag sitter hemma."
+  },
+  {
+    "role": "assistant",
+    "content": "Ja! Det kan kännas riktigt fint. Gillar du också att läsa när det regnar?\n\nKorrigeringar:\n- Inga fel – utmärkt!"
+  },
+  {
+    "role": "user",
+    "text": "Min bror spelar fotboll varje dagar."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj, då tränar han mycket! Är han med i ett lag?\n\nKorrigeringar:\n- \"varje dagar\" → varje dag (singular)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill resa till Paris och se Eiffeltorn."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är en fantastisk stad! Har du varit i Frankrike tidigare?\n\nKorrigeringar:\n- \"Eiffeltorn\" → Eiffeltornet (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag känner mig sjuk idag, jag tror jag har en förkylning."
+  },
+  {
+    "role": "assistant",
+    "content": "Krya på dig! Vila och drick mycket vatten. Har du feber också?\n\nKorrigeringar:\n- Inga fel – bra!"
+  },
+  {
+    "role": "user",
+    "text": "Vi gick hem efter festen eftersom vi var trött."
+  },
+  {
+    "role": "assistant",
+    "content": "Det förstår jag! Man blir ofta trött efter en fest. Hade ni kul?\n\nKorrigeringar:\n- \"vi var trött\" → vi var trötta (plural)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill köpa nya skor men jag har inte nog pengar."
+  },
+  {
+    "role": "assistant",
+    "content": "Kanske hittar du ett bra erbjudande på rea! Vilken typ av skor vill du ha?\n\nKorrigeringar:\n- \"inte nog pengar\" → inte tillräckligt med pengar (bättre uttryck)."
+  },
+  {
+    "role": "user",
+    "text": "Jag satt på tåget och läste en bok."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter mysigt! Vad för bok läste du?\n\nKorrigeringar:\n- Inga fel – jättebra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vill laga köttbullar men jag vet inte hur man gör dom."
+  },
+  {
+    "role": "assistant",
+    "content": "Köttbullar är en svensk klassiker! Vill du ha ett enkelt recept?\n\nKorrigeringar:\n- \"dom\" → dem (rätt stavning i skrift)."
+  },
+  {
+    "role": "user",
+    "text": "Vi såg en film igår som var väldigt roligt."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad härligt! Vilken film var det?\n\nKorrigeringar:\n- \"väldigt roligt\" → väldigt rolig (syftar på filmen = en-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tog en promenad i skogen och såg många träd."
+  },
+  {
+    "role": "assistant",
+    "content": "Så härligt! Naturen är alltid lugnande. Såg du några djur också?\n\nKorrigeringar:\n- Inga fel – perfekt!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vill sova nu men jag måste göra klart mina läxa."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj, kämpa på! Vad är det för läxa?\n\nKorrigeringar:\n- \"mina läxa\" → mina läxor (plural)."
+  },
+  {
+    "role": "user",
+    "text": "Min mamma lagar mat varje kväll och det luktar gott."
+  },
+  {
+    "role": "assistant",
+    "content": "Så mysigt! Vad brukar hon laga?\n\nKorrigeringar:\n- Inga fel – riktigt bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag var på bibliotek igår och lånade två böcker."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Vad för böcker lånade du?\n\nKorrigeringar:\n- \"på bibliotek\" → på biblioteket (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill köpa en present till min kompis födelsedag."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad fint! Vad tänker du köpa?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag sprang snabbt till skolan eftersom jag var sen."
+  },
+  {
+    "role": "assistant",
+    "content": "Bra träning! Hann du i tid?\n\nKorrigeringar:\n- Inga fel – jättebra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vill lära mig svenska snabbare, har du några tips?"
+  },
+  {
+    "role": "assistant",
+    "content": "Absolut! Försök läsa lite varje dag, prata så mycket du kan och lyssna på svenska poddar. Vill du ha tips på poddar?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Igår gick jag till affär och köpte frukt."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Vilken frukt köpte du?\n\nKorrigeringar:\n- \"till affär\" → till affären (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg en film på tv igår natt."
+  },
+  {
+    "role": "assistant",
+    "content": "Kul! Vilken film såg du?\n\nKorrigeringar:\n- \"igår natt\" → i natt (man brukar säga så om natten som nyss var)."
+  },
+  {
+    "role": "user",
+    "text": "Jag gick till sjön och simmade lite."
+  },
+  {
+    "role": "assistant",
+    "content": "Så skönt! Var vattnet kallt?\n\nKorrigeringar:\n- Inga fel – riktigt bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag äter frukost nu och det är mackor med ost."
+  },
+  {
+    "role": "assistant",
+    "content": "Mums! Brukar du dricka kaffe till frukosten också?\n\nKorrigeringar:\n- \"det är mackor\" → jag äter mackor (bättre uttryck i detta sammanhang)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill köpa en jacka men de är för dyrt."
+  },
+  {
+    "role": "assistant",
+    "content": "Förstår! Kanske kan du hitta en på rea. Vilken färg vill du ha?\n\nKorrigeringar:\n- \"de är för dyrt\" → den är för dyr (syftar på jacka, en-ord)."
+  },
+  {
+    "role": "user",
+    "text": "Min kompis bjöd mig till hans födelsedagsfest."
+  },
+  {
+    "role": "assistant",
+    "content": "Vad kul! Ska du ge honom en present?\n\nKorrigeringar:\n- \"till hans\" → på hans födelsedagsfest (rätt preposition)."
+  },
+  {
+    "role": "user",
+    "text": "Jag glömde mina böcker hemma idag."
+  },
+  {
+    "role": "assistant",
+    "content": "Aj då! Kunde du ändå följa lektionen?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vill resa till Norge för att se fjordarna."
+  },
+  {
+    "role": "assistant",
+    "content": "Det låter fantastiskt! Fjordarna är otroliga. Har du varit i Norge förut?\n\nKorrigeringar:\n- Inga fel – riktigt bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag tränade på gymmet igår och nu jag har träningsvärk."
+  },
+  {
+    "role": "assistant",
+    "content": "Bra jobbat! Träningsvärk betyder att du har tränat hårt. Vad tränade du?\n\nKorrigeringar:\n- \"nu jag har\" → nu har jag (ordföljd)."
+  },
+  {
+    "role": "user",
+    "text": "Vi gick genom parken och såg många blommor."
+  },
+  {
+    "role": "assistant",
+    "content": "Så fint! Blommor gör promenaden extra trevlig. Har du en favoritblomma?\n\nKorrigeringar:\n- Inga fel – utmärkt!"
+  },
+  {
+    "role": "user",
+    "text": "Jag åt lunch med min vän på en restaurang."
+  },
+  {
+    "role": "assistant",
+    "content": "Trevligt! Vad åt ni?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag kan inte komma ikväll för jag måste plugga matte."
+  },
+  {
+    "role": "assistant",
+    "content": "Förstår! Lycka till med matten. Är det svårt?\n\nKorrigeringar:\n- Inga fel – perfekt!"
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker att fotboll är mer roligare än basket."
+  },
+  {
+    "role": "assistant",
+    "content": "Kul! Spelar du i ett lag?\n\nKorrigeringar:\n- \"mer roligare\" → roligare (man behöver inte säga \"mer\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag var hemma hela dagen igår eftersom jag kände mig sjuk."
+  },
+  {
+    "role": "assistant",
+    "content": "Stackare! Hoppas du mår bättre nu. Vila är viktigt.\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag dricker te varje morgon men ibland jag vill kaffe."
+  },
+  {
+    "role": "assistant",
+    "content": "Jag förstår! Variation är bra. Föredrar du svart kaffe eller med mjölk?\n\nKorrigeringar:\n- \"ibland jag vill\" → ibland vill jag (ordföljd)."
+  },
+  {
+    "role": "user",
+    "text": "Jag gick till apoteket för att köpa medicin."
+  },
+  {
+    "role": "assistant",
+    "content": "Bra! Behövde du något mot förkylning?\n\nKorrigeringar:\n- Inga fel – jättebra!"
+  },
+  {
+    "role": "user",
+    "text": "Vi reste till Italien och åt mycket pizza."
+  },
+  {
+    "role": "assistant",
+    "content": "Åh, vad gott! Italien är känd för sin pizza. Vilken var din favorit?\n\nKorrigeringar:\n- \"Italien är känd\" → Italien är känt (neutrum)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg en fågel som flög väldigt högt."
+  },
+  {
+    "role": "assistant",
+    "content": "Vackert! Gillar du fåglar?\n\nKorrigeringar:\n- Inga fel – bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag gick till biblioteket för att studera."
+  },
+  {
+    "role": "assistant",
+    "content": "Bra idé! Är biblioteket nära ditt hem?\n\nKorrigeringar:\n- Inga fel – riktigt bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag vaknade tidigt men jag somnade igen."
+  },
+  {
+    "role": "assistant",
+    "content": "Det kan vara skönt ibland! Fick du sova ut?\n\nKorrigeringar:\n- Inga fel – perfekt!"
+  },
+  {
+    "role": "user",
+    "text": "Jag gillar spela gitarr när jag har tid."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Spelar du akustisk eller elektrisk gitarr?\n\nKorrigeringar:\n- \"gillar spela\" → gillar att spela (behöver \"att\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag gick ut utan jacka och det var väldigt kallt."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj! Hoppas du inte blev sjuk. Brukar du gilla vinter?\n\nKorrigeringar:\n- Inga fel – mycket bra!"
+  },
+  {
+    "role": "user",
+    "text": "Min pappa lagade middag igår och det smakade gott."
+  },
+  {
+    "role": "assistant",
+    "content": "Så fint! Vad lagade han?\n\nKorrigeringar:\n- Inga fel – riktigt bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag måste köpa en ny dator eftersom min är gammal."
+  },
+  {
+    "role": "assistant",
+    "content": "Förstår! Vill du ha en laptop eller en stationär dator?\n\nKorrigeringar:\n- Inga fel – bra!"
+  },
+  {
+    "role": "user",
+    "text": "Vi spelade kort hela kväll igår."
+  },
+  {
+    "role": "assistant",
+    "content": "Så mysigt! Vann du?\n\nKorrigeringar:\n- \"hela kväll\" → hela kvällen (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag såg ett träd som var mycket höga."
+  },
+  {
+    "role": "assistant",
+    "content": "Träd kan vara imponerande! Var det i en park?\n\nKorrigeringar:\n- \"ett träd som var mycket höga\" → ett träd som var mycket högt (neutrum)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill resa runt världen."
+  },
+  {
+    "role": "assistant",
+    "content": "Vilken dröm! Vilket land vill du besöka först?\n\nKorrigeringar:\n- \"resa runt världen\" → resa runt i världen (bättre uttryck)."
+  },
+  {
+    "role": "user",
+    "text": "Jag skrev fel ord i min uppsats."
+  },
+  {
+    "role": "assistant",
+    "content": "Det händer alla! Läraren förstår nog. Vill du veta det rätta ordet?\n\nKorrigeringar:\n- Inga fel – bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag dricker vatten ofta eftersom det är hälsosam."
+  },
+  {
+    "role": "assistant",
+    "content": "Det är klokt! Vatten är väldigt viktigt. Dricker du kranvatten eller köper du?\n\nKorrigeringar:\n- \"hälsosam\" → hälsosamt (adverb/neutrum)."
+  },
+  {
+    "role": "user",
+    "text": "Jag gick hem tidigt för att jag var trött."
+  },
+  {
+    "role": "assistant",
+    "content": "Det var nog bra! Vila är viktigt. Känner du dig bättre nu?\n\nKorrigeringar:\n- Inga fel – perfekt!"
+  },
+  {
+    "role": "user",
+    "text": "Jag tycker om läsa böcker på kväll."
+  },
+  {
+    "role": "assistant",
+    "content": "Härligt! Böcker kan göra kvällen mysig. Har du en favoritgenre?\n\nKorrigeringar:\n- \"tycker om läsa\" → tycker om att läsa (behöver \"att\").\n- \"på kväll\" → på kvällen (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag vill jobba som läkare i framtid."
+  },
+  {
+    "role": "assistant",
+    "content": "Vilket fint mål! Det är ett viktigt yrke. Vill du jobba på sjukhus?\n\nKorrigeringar:\n- \"i framtid\" → i framtiden (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag tappade bort min plånbok igår."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj, vad jobbigt! Hittade du den igen?\n\nKorrigeringar:\n- Inga fel – riktigt bra!"
+  },
+  {
+    "role": "user",
+    "text": "Jag gick till köpcentrum med min syster."
+  },
+  {
+    "role": "assistant",
+    "content": "Trevligt! Köpte ni något?\n\nKorrigeringar:\n- \"till köpcentrum\" → till köpcentret (bestämd form)."
+  },
+  {
+    "role": "user",
+    "text": "Jag gillar lyssna på musik när jag studerar."
+  },
+  {
+    "role": "assistant",
+    "content": "Det kan hjälpa mycket! Vilken musik lyssnar du på?\n\nKorrigeringar:\n- \"gillar lyssna\" → gillar att lyssna (behöver \"att\")."
+  },
+  {
+    "role": "user",
+    "text": "Jag spelade datorspel hela natten."
+  },
+  {
+    "role": "assistant",
+    "content": "Oj, vilken lång natt! Var det roligt?\n\nKorrigeringar:\n- Inga fel – men kanske lite för sent 😉"
+  }
+]
