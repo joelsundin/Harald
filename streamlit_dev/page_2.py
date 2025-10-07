@@ -6,8 +6,8 @@ from io import StringIO
 from google import genai
 from google.genai.types import GenerateContentConfig
 from api.sysp import system_prompt
+import base64
 
-# --- Configuration and Session State Retrieval ---
 
 # Ensure the API key is set via secrets.toml or environment variable
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or st.secrets["GEMINI_API_KEY"]
@@ -20,8 +20,27 @@ total_questions = ss.get('quiz_total_questions')
 failed_questions = ss.get('failed_questions')
 highest_score = ss.get('highest_score')
 
-# --- Gemini Client Initialization and System Prompt ---
+def get_base64_of_bin_file(bin_file):
+    """ Reads a binary file and returns its Base64 encoded string. """
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
+try:
+    user_avatar_path = "generic_headshot.png"
+    bot_avatar_path = "headshot.png"
+    user_avatar = f"data:image/png;base64,{get_base64_of_bin_file(user_avatar_path)}"
+    bot_avatar = f"data:image/png;base64,{get_base64_of_bin_file(bot_avatar_path)}"
+except FileNotFoundError:
+    # Use default emojis if images are not found
+    user_avatar = "👤"
+    bot_avatar = "🤖"
+    st.warning("Avatar images not found. Using default emojis. Please add 'user_avatar.png' and 'bot_avatar.png'.")
+
+
+
+
+# --- Gemini Client Initialization and System Prompt ---
 if "client" not in ss:
     try:
         ss.client = genai.Client(api_key=GEMINI_API_KEY)
@@ -51,7 +70,7 @@ def build_system_prompt():
             for i, q in enumerate(failed_questions):
                 failed_q_summary.write(f"  - Fråga: '{q.get('question')}' (Korrekt svar: {q.get('correct')}).\n")
             
-            prompt += "\nBaserat på denna information (de missade frågorna) bör du erbjuda riktade övningar, förklaringar eller använda dessa ord naturligt i konversationen. Försök att hjälpa dem att lära sig de ord de missade. "
+            prompt += "\nBerätta för användaren att du sett att den gjort en quiz och föreslå att hjälpa med de frågor användaren haft fel på! Viktigt!"
             prompt += failed_q_summary.getvalue()
         else:
             prompt += "\nAnvändaren klarade alla frågor! Fokusera på att bygga vidare på deras kunskap."
@@ -65,11 +84,7 @@ def build_system_prompt():
 if "messages" not in ss:
     # Build the system context at startup
     system_prompt_text = build_system_prompt()
-    
-    # Initialize chat history for DISPLAY ONLY 
     ss.messages = [] 
-    
-    # Store the system prompt separately for API use
     ss.system_prompt = system_prompt_text
 
     # Add the initial Harald greeting
@@ -123,25 +138,23 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
 # --- Display History ---
 for message in ss.messages:
-    # Map 'harald' role back to Streamlit's 'assistant' avatar
-    role = "assistant" if message["role"] == "harald" else message["role"]
-    with st.chat_message(role):
+    role = message["role"]
+    avatar = bot_avatar if role == "harald" else user_avatar
+    display_role = "assistant" if role == "harald" else role
+    with st.chat_message(display_role, avatar=avatar):
         st.markdown(message["content"])
 
 # --- Chat Input and Response Logic (Non-streaming) ---
 if prompt := st.chat_input("Vad vill du fråga Harald?"):
     
     # 1. Display user message and append to history
-    st.chat_message("user").markdown(prompt)
+    st.chat_message("user", avatar=user_avatar).markdown(prompt)
     ss.messages.append({"role": "user", "content": prompt})
     
-    # 2. Call Gemini and wait for the full response
     try:
-        with st.spinner("Harald tänker..."):
-            # Use the synchronous send_message method
+        with st.spinner("..."):
             response = ss.chat_session.send_message(prompt)
             
             # Get the text content
@@ -152,7 +165,7 @@ if prompt := st.chat_input("Vad vill du fråga Harald?"):
 
 
     # 3. Display the full response from Harald
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant", avatar=bot_avatar):
         st.markdown(full_response)
 
     # 4. Add the model's final response to history

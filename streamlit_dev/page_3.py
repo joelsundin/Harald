@@ -1,42 +1,51 @@
-# quiz
-
 import streamlit as st
 import random
 from quiz_data import questions 
 
-st.header("Swedish Quiz 🇸🇪")
-st.markdown("Test your basic Swedish vocabulary knowledge. Press START to begin!")
+# --- STYLING (No changes here) ---
+st.markdown(
+    """
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanchenjunga:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap');
+    .smaller-text { font-family: 'Libre Baskerville', serif; font-size: 30px; font-style: bold-700; text-align: center; margin-top: 10vh; }
+    .even-smaller-text { font-family: 'Libre Baskerville', serif; font-size: 15px; font-style: bold-700; text-align: center; color:#888888; }
+    div.stButton > button:first-child { font-family: 'Libre Baskerville', serif !important; background-color: #ebebeb; color:#000000; border: none; border-radius: 12px; }
+    div.stButton > button:hover { background-color: #d4d4d4; color:#000000; border: none; border-radius: 12px; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
+# --- SESSION STATE INITIALIZATION (No changes here) ---
 ss = st.session_state
 ss.setdefault('counter', 0)
 ss.setdefault('start', False)
 ss.setdefault('stop', False)
-ss.setdefault('button_label', ['START', 'SUBMIT', 'RELOAD'])
+ss.setdefault('button_label', ['Start', 'Submit', 'Quit'])
 ss.setdefault('current_quiz', [])
 ss.setdefault('user_answers', [])
 ss.setdefault('grade', 0)
-
 ss.setdefault('final_quiz_score', 0)       
 ss.setdefault('quiz_total_questions', 10)  
 ss.setdefault('highest_score', 0)
 ss.setdefault('failed_questions', [])
 
 def grade_quiz():
-    """Calculates the score, updates the grade, and checks for a new highest score."""
+    """Calculates the score and identifies failed questions."""
     correct_count = 0
+    # REFACTORED: Clear the list of failed questions for this specific attempt
+    ss.failed_questions = [] 
     ss.user_answers = []
     total_q = len(ss.current_quiz)
     
-    # Check ans's
     for i in range(total_q):
         question_data = ss.current_quiz[i]
-        correct_ans = ss.current_quiz[i].get('correct') 
+        correct_ans = question_data.get('correct') 
         user_ans = ss.get(f'Q{i}')
         
-        # if ans matches correct
         is_correct = (user_ans == correct_ans)
-        
         ss.user_answers.append(is_correct)
+
         if is_correct:
             correct_count += 1
         else:
@@ -46,107 +55,104 @@ def grade_quiz():
                 'correct': correct_ans,
                 'user_answer': user_ans
             })
-
-
             
     ss.grade = correct_count
     ss.stop = True
-    
-    # update persistent scores after a successful SUBMIT
-    ss['final_quiz_score'] = ss.grade
-    ss['quiz_total_questions'] = total_q
+    ss.final_quiz_score = ss.grade
+    ss.quiz_total_questions = total_q
     
     if ss.grade > ss.highest_score:
         ss.highest_score = ss.grade
         st.toast(f"New High Score: {ss.highest_score}/{total_q}!", icon='🏆')
 
+# REFACTORED: `set_up` function is removed. Its logic is now inside `button_clicked`.
+
 def button_clicked():
-    """Handles the buttons (START -> SUBMIT -> RELOAD)."""
+    """Handles the main state transitions for the quiz."""
     
-    # State 0: START is clicked -> Move to quiz display
+    # State 0: START clicked
     if ss.counter == 0:
-        ss.counter = 1
+        # This is the logic that was in set_up()
         ss.start = True
-        # Randomly select 10 questions (ensure questions list has at least 10 items)
+        ss.stop = False
+        ss.counter = 1
         try:
             ss.current_quiz = random.sample(questions, 10)
         except ValueError:
             st.error("Error: Not enough questions available. Need at least 10.")
-            ss.counter = 0 # Stay on START
-            return
+            ss.start = False
+            ss.counter = 0
 
-    # State 1: SUBMIT
+    # State 1: SUBMIT clicked
     elif ss.counter == 1:
-        ss.counter = 2
         grade_quiz()
+        ss.counter = 2
+        # REFACTORED: Removed the redundant persistent_data dictionary.
+        # The data is already in session_state, no need to copy it.
 
-    # state 2: reload
+    # State 2: RESTART QUIZ clicked
     elif ss.counter == 2:
-        persistent_data = {
-            'highest_score': ss.highest_score,
-            'final_quiz_score': ss.final_quiz_score,
-            'quiz_total_questions': ss.quiz_total_questions,
-            'failed_questions': ss.failed_questions
-        }
-        
-        st.session_state.clear()
-        
-        # restore the persistent data
-        for key, value in persistent_data.items():
-            st.session_state[key] = value
-
-        # Set the counter back to 0 (START state)
-        st.session_state['counter'] = 0
+        # REFACTORED: Drastically simplified the reset logic.
+        # We just need to reset the counter and flags.
+        ss.counter = 0
+        ss.start = False
+        ss.stop = False
+        ss.current_quiz = []
+        ss.user_answers = []
+        ss.grade = 0
+        # `highest_score` and `failed_questions` are preserved or handled by grade_quiz()
 
 
-def quiz_app():
-    if ss.start:
-        with st.container(border=True):
-            st.subheader("Quiz in Progress!")
-            
-            for i in range(len(ss.current_quiz)):
-                question_data = ss.current_quiz[i]
-                question_number = i + 1
-                radio_key = f"Q{i}"
-                
-                st.markdown(f"**Question {question_number}.** {question_data.get('question')}")
-                st.radio(
-                    label="Choose your answer:",
-                    options=question_data.get("options"),
-                    index=None,
-                    key=radio_key,
-                    label_visibility="collapsed"
-                )
-                
-                if ss.stop:
-                    # Check if ss.user_answers has the result for the current question
-                    if i < len(ss.user_answers): 
-                        is_correct = ss.user_answers[i]
-                        correct_ans = question_data.get('correct')
+# --- MAIN APP LAYOUT ---
 
-                        if is_correct:
-                            st.success(f"✅ **CORRECT!**")
-                        else:
-                            st.error(f"❌ **INCORRECT.** The correct answer was: **{correct_ans}**")
-                        
-                st.markdown("---")
+st.markdown("<div class='smaller-text'>Quiz</div>", unsafe_allow_html=True)
+st.markdown("<div class='even-smaller-text'> Test your basic Swedish vocabulary knowledge.</div>", unsafe_allow_html=True)
+st.markdown("---")
 
-
-# --- 4. Main App Execution ---
-
-# Highest score in the sidebar
+# Display highest score in the sidebar
 if ss.highest_score > 0:
     st.sidebar.markdown(f"🏆 **Highest Score:** **{ss.highest_score}** / {ss.quiz_total_questions}")
 
+# REFACTORED: Conditional display of the quiz. This is a much cleaner flow.
+if not ss.start:
+    st.info("Click START to begin the quiz.")
+else:
+    # This container holds the questions and results
+    with st.container(border=True):
+        st.subheader("Quiz in Progress!")
+        
+        for i, question_data in enumerate(ss.current_quiz):
+            radio_key = f"Q{i}"
+            
+            st.markdown(f"**Question {i + 1}.** {question_data.get('question')}")
+            st.radio(
+                label="Choose your answer:",
+                options=question_data.get("options"),
+                index=None,
+                key=radio_key,
+                label_visibility="collapsed"
+            )
+            
+            # Show results after quiz is stopped
+            if ss.stop:
+                if i < len(ss.user_answers):
+                    if ss.user_answers[i]:
+                        st.success("✅ **CORRECT!**")
+                    else:
+                        correct_ans = question_data.get('correct')
+                        st.error(f"❌ **INCORRECT.** The correct answer was: **{correct_ans}**")
+            
+            st.markdown("---")
+
+    # Display final score metric after the quiz is submitted
+    if ss.stop:
+        st.markdown("##")
+        st.metric(label="Your Final Score", value=f"{ss.grade} / {len(ss.current_quiz)}")
+
+# The main button that drives the app's state
 st.button(
     label=ss.button_label[ss.counter], 
     key='main_button', 
     on_click=button_clicked,
     use_container_width=True
 )
-
-quiz_app()
-
-if ss.stop:
-    st.markdown("##")
-    st.metric(label="Your Final Score", value=f"{ss.grade} / {len(ss.current_quiz)}")
