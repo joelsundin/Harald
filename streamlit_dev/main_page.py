@@ -1,4 +1,15 @@
+# landing page
 import streamlit as st
+
+ss = st.session_state
+ss.setdefault('counter', 0)
+ss.setdefault('start', False)
+ss.setdefault('stop', False)
+ss.setdefault('button_label', ['START', 'SUBMIT', 'RELOAD'])
+ss.setdefault('current_quiz', [])
+ss.setdefault('user_answers', [])
+ss.setdefault('grade', 0)
+ss.setdefault('final_quiz_score', 0)
 
 # Add the Google Font
 st.markdown(
