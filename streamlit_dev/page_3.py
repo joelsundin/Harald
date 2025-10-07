@@ -1,20 +1,63 @@
 import streamlit as st
 import random
 from quiz_data import questions 
+import base64
 
-# --- STYLING (No changes here) ---
+
+def get_base64_of_bin_file(bin_file):
+    """ Reads a binary file and returns its Base64 encoded string. """
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+bin_str = get_base64_of_bin_file("cute_thinking_harald.png")
+
 st.markdown(
-    """
+    f"""
     <style>
+    .stApp {{
+        background-image: url("data:image/png;base64,{bin_str}");
+        background-size: 25%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position: top 70px right 50px;
+    }}
+
     @import url('https://fonts.googleapis.com/css2?family=Kanchenjunga:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap');
-    .smaller-text { font-family: 'Libre Baskerville', serif; font-size: 30px; font-style: bold-700; text-align: center; margin-top: 10vh; }
-    .even-smaller-text { font-family: 'Libre Baskerville', serif; font-size: 15px; font-style: bold-700; text-align: center; color:#888888; }
-    div.stButton > button:first-child { font-family: 'Libre Baskerville', serif !important; background-color: #ebebeb; color:#000000; border: none; border-radius: 12px; }
-    div.stButton > button:hover { background-color: #d4d4d4; color:#000000; border: none; border-radius: 12px; }
+
+    .smaller-text {{
+        font-family: 'Libre Baskerville', serif;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 10vh;
+    }}
+    .even-smaller-text {{
+        font-family: 'Libre Baskerville', serif;
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+        color: #888888;
+    }}
+    div.stButton > button:first-child {{
+        font-family: 'Libre Baskerville', serif !important;
+        background-color: #ebebeb;
+        color: #000000;
+        border: none;
+        border-radius: 12px;
+    }}
+    div.stButton > button:hover {{
+        background-color: #d4d4d4;
+        color: #000000;
+        border: none;
+        border-radius: 12px;
+    }}
     </style>
     """,
     unsafe_allow_html=True,
 )
+
+
 
 # --- SESSION STATE INITIALIZATION (No changes here) ---
 ss = st.session_state
@@ -104,7 +147,7 @@ def button_clicked():
 
 
 # --- MAIN APP LAYOUT ---
-
+#st.markdown("<style>.stApp { background: none; }</style>", unsafe_allow_html=True)
 st.markdown("<div class='smaller-text'>Quiz</div>", unsafe_allow_html=True)
 st.markdown("<div class='even-smaller-text'> Test your basic Swedish vocabulary knowledge.</div>", unsafe_allow_html=True)
 st.markdown("---")
@@ -150,6 +193,7 @@ else:
         st.metric(label="Your Final Score", value=f"{ss.grade} / {len(ss.current_quiz)}")
 
 # The main button that drives the app's state
+
 st.button(
     label=ss.button_label[ss.counter], 
     key='main_button', 
