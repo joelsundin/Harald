@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import json_storage
+
+ss = st.session_state
+ss.storage = json_storage.JSONStorage()
 
 # --- Define your pages ---
 main_page = st.Page("main_page.py", title="Home")

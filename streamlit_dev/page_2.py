@@ -14,6 +14,9 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or st.secrets["GEMINI_API_KEY"
 MODEL_NAME = 'gemini-2.5-flash'
 ss = st.session_state
 
+json_storage = ss.get('storage')
+json_storage.populate_session_state(ss)
+
 # Retrieve quiz data from Session State (set by the quiz page)
 final_score = ss.get('final_quiz_score')
 total_questions = ss.get('quiz_total_questions')
@@ -170,3 +173,6 @@ if prompt := st.chat_input("Vad vill du fråga Harald?"):
 
     # 4. Add the model's final response to history
     ss.messages.append({"role": "harald", "content": full_response})
+
+    # 5. Save session state to JSON storage
+    json_storage.store_session_state(ss)
