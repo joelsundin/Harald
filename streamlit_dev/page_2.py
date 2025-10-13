@@ -91,7 +91,7 @@ if "messages" not in ss:
     ss.system_prompt = system_prompt_text
 
     # Add the initial Harald greeting
-    initial_greeting = "Hallå! Jag heter Harald, din personliga svensklärare. Hur kan jag hjälpa dig idag?"
+    initial_greeting = "Hello! I'm Harald, your personal Swedish tutor. Would you like to have a conversation with me in Swedish? Or if you prefer, we could start by practicing some Swedish words and phrases together. What sounds good to you?"
     ss.messages.append({"role": "harald", "content": initial_greeting})
 
 if "chat_session" not in ss:
