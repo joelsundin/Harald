@@ -22,9 +22,6 @@ page_4 = st.Page("page_4.py", title="Read&Write")
 page_flashcards = st.Page("page_flashcards.py", title="Flashcards")
 pg = st.navigation([main_page, page_2, page_3, page_4, page_flashcards])
 
-
-
-
 # --- Inject CSS ---
 st.markdown(
     """

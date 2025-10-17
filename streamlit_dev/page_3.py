@@ -57,8 +57,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
-
 # --- SESSION STATE INITIALIZATION (No changes here) ---
 ss = st.session_state
 ss.setdefault('counter', 0)
@@ -133,20 +131,15 @@ def button_clicked():
     elif ss.counter == 1:
         grade_quiz()
         ss.counter = 2
-        # REFACTORED: Removed the redundant persistent_data dictionary.
-        # The data is already in session_state, no need to copy it.
-
+    
     # State 2: RESTART QUIZ clicked
     elif ss.counter == 2:
-        # REFACTORED: Drastically simplified the reset logic.
-        # We just need to reset the counter and flags.
         ss.counter = 0
         ss.start = False
         ss.stop = False
         ss.current_quiz = []
         ss.user_answers = []
         ss.grade = 0
-        # `highest_score` and `failed_questions` are preserved or handled by grade_quiz()
 
 
 # --- MAIN APP LAYOUT ---
