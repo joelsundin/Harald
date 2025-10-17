@@ -14,6 +14,9 @@ keys = [
 
 class JSONStorage:
   def __init__(self, default=None):
+    if not os.path.exists('storage.json'):
+      with open('storage.json', 'w+') as f:
+        f.write("{}")
     with open('storage.json', 'r') as f:
       try:
         self.storage = json.load(f)
@@ -37,7 +40,14 @@ class JSONStorage:
   def store_session_state(self, ss):
     for key in keys:
       if key in ss:
-        self.storage[key] = ss[key]
+        if key == 'messages':
+          if len(ss[key]) > 20:
+            # Only store the 20 most recent messages to limit size
+            self.storage[key] = ss[key][-20:]
+          else:
+            self.storage[key] = ss[key]
+        else:
+          self.storage[key] = ss[key]
     self.save()
 
   def populate_session_state(self, ss):

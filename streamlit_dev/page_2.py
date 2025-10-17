@@ -104,6 +104,7 @@ if "chat_session" not in ss:
     config = GenerateContentConfig(
         system_instruction=ss.system_prompt,
         tools=[tools],
+        temperature=0.3,
         # You can add safety_settings here if you want:
         # safety_settings=...
     )
