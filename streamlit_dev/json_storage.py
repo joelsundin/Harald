@@ -1,6 +1,7 @@
 import json
 import os
 import streamlit as st
+import traceback
 
 keys = [
   'final_quiz_score',
@@ -8,14 +9,16 @@ keys = [
   'failed_questions',
   'highest_score',
   'messages',
+  'flashcards',
 ]
 
 class JSONStorage:
   def __init__(self, default=None):
-    with open('storage.json', 'a+') as f:
+    with open('storage.json', 'r') as f:
       try:
         self.storage = json.load(f)
       except json.JSONDecodeError:
+        print(traceback.format_exc())
         self.storage = {}
 
   def get(self, key, default=None):

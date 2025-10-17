@@ -11,7 +11,8 @@ main_page = st.Page("main_page.py", title="Home")
 page_2 = st.Page("page_2.py", title="Harald")
 page_3 = st.Page("page_3.py", title="Quizzes")
 page_4 = st.Page("page_4.py", title="Read&Write")
-pg = st.navigation([main_page, page_2, page_3, page_4])
+page_flashcards = st.Page("page_flashcards.py", title="Flashcards")
+pg = st.navigation([main_page, page_2, page_3, page_4, page_flashcards])
 
 
 

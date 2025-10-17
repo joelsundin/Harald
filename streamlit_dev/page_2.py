@@ -1,11 +1,13 @@
 # chat.py
 import streamlit as st
+import traceback
 import os
 import textwrap
 from io import StringIO
 from google import genai
-from google.genai.types import GenerateContentConfig
+from google.genai.types import Content, GenerateContentConfig, Part, Tool
 from api.sysp import system_prompt
+from api.functions import add_flashcard, add_flashcard_function
 import base64
 
 
@@ -13,7 +15,7 @@ import base64
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or st.secrets["GEMINI_API_KEY"]
 MODEL_NAME = 'gemini-2.5-flash'
 ss = st.session_state
-
+print("Starting chat")
 json_storage = ss.get('storage')
 json_storage.populate_session_state(ss)
 
@@ -84,11 +86,13 @@ def build_system_prompt():
 
 # --- Chat Initialization ---
 
+system_prompt_text = build_system_prompt()
+ss.system_prompt = system_prompt_text
+
 if "messages" not in ss:
+    print("Starting new chat session.")
     # Build the system context at startup
-    system_prompt_text = build_system_prompt()
     ss.messages = [] 
-    ss.system_prompt = system_prompt_text
 
     # Add the initial Harald greeting
     initial_greeting = "Hello! I'm Harald, your personal Swedish tutor. Would you like to have a conversation with me in Swedish? Or if you prefer, we could start by practicing some Swedish words and phrases together. What sounds good to you?"
@@ -96,8 +100,10 @@ if "messages" not in ss:
 
 if "chat_session" not in ss:
     # Initialize the configuration with the stored system prompt
+    tools = Tool(function_declarations=[add_flashcard_function])
     config = GenerateContentConfig(
         system_instruction=ss.system_prompt,
+        tools=[tools],
         # You can add safety_settings here if you want:
         # safety_settings=...
     )
@@ -159,10 +165,19 @@ if prompt := st.chat_input("Vad vill du fråga Harald?"):
     try:
         with st.spinner("..."):
             response = ss.chat_session.send_message(prompt)
+            print("Response content: ", response.candidates[0].content)
             
-            # Get the text content
+            if response.candidates[0].content.parts and (call := response.candidates[0].content.parts[0].function_call):
+                add_flashcard(ss, **call.args)
+                tool_reply = Part.from_function_response(
+                    name=call.name,
+                    response={"result": "Flashcard added successfully."},
+                )
+                response = ss.chat_session.send_message([tool_reply])
             full_response = response.text
     except Exception as e:
+        print(e)
+        print(traceback.format_exc())
         full_response = f"Jag ber om ursäkt, ett fel uppstod vid kommunikationen: {e}"
         st.error(full_response)
 

@@ -22,6 +22,13 @@ ss.setdefault("followup_history", [])
 st.header("Reading & Writing Comprehension")
 st.markdown("Read the article and choose a task: summarize it or answer comprehension questions.")
 
+if "client" not in ss:
+    try:
+        ss.client = genai.Client(api_key=GEMINI_API_KEY)
+    except Exception as e:
+        st.error(f"Error initializing Gemini client: {e}")
+        st.stop()
+
 
 if "selected_article" not in ss or ss.selected_article is None:
     ss.selected_article = random.choice(urls)
@@ -59,7 +66,7 @@ User summary: {user_summary}
 """
         with st.spinner("Harald is reviewing your summary..."):
             config = GenerateContentConfig(system_instruction=system_prompt)
-            chat_session = client.chats.create(model=MODEL_NAME, config=config)
+            chat_session = ss.client.chats.create(model=MODEL_NAME, config=config)
             response = chat_session.send_message(user_summary)
             ss.feedback = response.text
         st.markdown("### Feedback from Harald:")
@@ -81,7 +88,7 @@ Article: {selected_article['content']}
 """
         with st.spinner("Harald is generating questions..."):
             config = GenerateContentConfig(system_instruction=question_prompt)
-            chat_session = client.chats.create(model=MODEL_NAME, config=config)
+            chat_session = ss.client.chats.create(model=MODEL_NAME, config=config)
             response = chat_session.send_message(selected_article["content"])
             questions = [q.strip() for q in response.text.split("\n") if q.strip()]
             ss.generated_questions = questions
@@ -110,7 +117,7 @@ User answers: {ss.user_answers}
 """
         with st.spinner("Harald is reviewing your answers..."):
             config = GenerateContentConfig(system_instruction=answer_eval_prompt)
-            chat_session = client.chats.create(model=MODEL_NAME, config=config)
+            chat_session = ss.client.chats.create(model=MODEL_NAME, config=config)
             response = chat_session.send_message("\n".join(ss.user_answers))
             ss.feedback = response.text
         st.markdown("### Feedback from Harald:")
@@ -157,7 +164,7 @@ Be aware of the user's task context (summary or comprehension questions) and fee
 """
     with st.spinner("Harald is responding..."):
         config = GenerateContentConfig(system_instruction=system_prompt)
-        chat_session = client.chats.create(model=MODEL_NAME, config=config)
+        chat_session = ss.client.chats.create(model=MODEL_NAME, config=config)
         response = chat_session.send_message(conversation_context)
         answer = response.text
 
