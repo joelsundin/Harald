@@ -74,6 +74,8 @@ ss.setdefault('highest_score', 0)
 ss.setdefault('failed_questions', [])
 
 def grade_quiz():
+    json_storage = ss.get('storage')
+    json_storage.populate_session_state(ss)
     """Calculates the score and identifies failed questions."""
     correct_count = 0
     # REFACTORED: Clear the list of failed questions for this specific attempt
@@ -107,6 +109,7 @@ def grade_quiz():
     if ss.grade > ss.highest_score:
         ss.highest_score = ss.grade
         st.toast(f"New High Score: {ss.highest_score}/{total_q}!", icon='🏆')
+    json_storage.store_session_state(ss)
 
 # REFACTORED: `set_up` function is removed. Its logic is now inside `button_clicked`.
 

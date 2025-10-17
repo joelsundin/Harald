@@ -2,9 +2,17 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import json_storage
+import traceback
+from streamlit import runtime
+from streamlit.runtime.scriptrunner import get_script_run_ctx
+
+def get_remote_ip() -> str:
+    """Get remote ip."""
+    print("Getting remote IP: %s", st.context.ip_address)
+    return st.context.ip_address or "localhost"
 
 ss = st.session_state
-ss.storage = json_storage.JSONStorage()
+ss.storage = json_storage.JSONStorage(get_remote_ip())
 
 # --- Define your pages ---
 main_page = st.Page("main_page.py", title="Home")

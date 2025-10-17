@@ -5,19 +5,24 @@ import traceback
 
 keys = [
   'final_quiz_score',
+  'grade',
   'quiz_total_questions',
   'failed_questions',
   'highest_score',
   'messages',
   'flashcards',
+  'current_quiz',
+  'user_answers',
+  'highest_score',
 ]
 
 class JSONStorage:
-  def __init__(self, default=None):
-    if not os.path.exists('storage.json'):
-      with open('storage.json', 'w+') as f:
+  def __init__(self, remote_ip="localhost"):
+    self.filename = f'storage-{remote_ip}.json'
+    if not os.path.exists(self.filename):
+      with open(self.filename, 'w+') as f:
         f.write("{}")
-    with open('storage.json', 'r') as f:
+    with open(self.filename, 'r') as f:
       try:
         self.storage = json.load(f)
       except json.JSONDecodeError:
@@ -34,7 +39,7 @@ class JSONStorage:
     self.storage.clear()
 
   def save(self):
-    with open('storage.json', 'w') as f:
+    with open(self.filename, 'w') as f:
       json.dump(self.storage, f)
 
   def store_session_state(self, ss):
