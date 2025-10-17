@@ -60,9 +60,8 @@ def build_system_prompt():
     prompt = textwrap.dedent(system_prompt)
     
     # 2. Quiz Performance Context
-    if final_score is not None and total_questions and total_questions > 0:
-        score_percentage = (final_score / total_questions) * 100
-        prompt += f"\nAnvändaren har nyligen genomfört ett ordförrådsquiz och fick {final_score} av {total_questions} ({score_percentage:.0f}%)."
+    if final_score is not None:
+        prompt += f"\nAnvändaren har nyligen genomfört ett ordförrådsquiz och fick {final_score} av {total_questions} ."
 
         if highest_score is not None and highest_score > 0:
             prompt += f"Användarens bästa resultat hittills är {highest_score} av {total_questions}."
