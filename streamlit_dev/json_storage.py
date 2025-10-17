@@ -4,16 +4,8 @@ import streamlit as st
 import traceback
 
 keys = [
-  'final_quiz_score',
-  'grade',
-  'quiz_total_questions',
-  'failed_questions',
-  'highest_score',
   'messages',
   'flashcards',
-  'current_quiz',
-  'user_answers',
-  'highest_score',
 ]
 
 class JSONStorage:
