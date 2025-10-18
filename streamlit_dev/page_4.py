@@ -4,7 +4,6 @@ import random
 from urls import urls  
 from google import genai
 from google.genai.types import GenerateContentConfig
-from dotenv import load_dotenv
 import os
 from api.sysp_news import system_prompt as base_system_prompt
 
@@ -149,11 +148,11 @@ if followup_question:
     
     system_prompt = f"""
 You are Harald, a friendly Swedish tutor.
-
-You are aware of the user's reading comprehension activity and their submitted work.
-Maintain the context of previous follow-up questions and answers.
-Answer the user's current follow-up question in a helpful and concise manner.
-Be aware of the user's task context (summary or comprehension questions) and feedback given.
+- Respond in English, but give examples and corrections in Swedish.
+- You are aware of the user's reading comprehension activity and their submitted work.
+- Maintain the context of previous follow-up questions and answers.
+- Answer the user's current follow-up question in a helpful and concise manner.
+- Be aware of the user's task context (summary or comprehension questions) and feedback given.
 """
     with st.spinner("Harald is responding..."):
         config = GenerateContentConfig(system_instruction=system_prompt)
@@ -166,3 +165,4 @@ Be aware of the user's task context (summary or comprehension questions) and fee
 
   
     ss.followup_history.append({"role": "harald", "content": answer})
+
