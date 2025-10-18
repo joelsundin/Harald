@@ -17,10 +17,26 @@ st.markdown(
     <style>
     .stApp {{
         background-image: url("data:image/png;base64,{bin_str}");
-        background-size: 25%;
-        background-position: center;
         background-repeat: no-repeat;
         background-position: top 70px right 50px;
+        background-attachment: fixed;
+        background-size: 250px;  /* default size for desktop */
+    }}
+
+    /* Medium screens (tablets) */
+    @media (max-width: 1024px) {{
+        .stApp {{
+            background-size: 250px;
+            background-position: top 150px right 5px;
+        }}
+    }}
+
+    /* Small screens (phones) */
+    @media (max-width: 600px) {{
+        .stApp {{
+            background-size: 200px;
+            background-position: top 170px right 15px;
+        }}
     }}
 
     @import url('https://fonts.googleapis.com/css2?family=Kanchenjunga:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap');
@@ -67,7 +83,7 @@ ss.setdefault('current_quiz', [])
 ss.setdefault('user_answers', [])
 ss.setdefault('grade', 0)
 ss.setdefault('final_quiz_score', 0)       
-ss.setdefault('quiz_total_questions', 10)  
+ss.setdefault('quiz_total_questions', 10) 
 ss.setdefault('highest_score', 0)
 ss.setdefault('failed_questions', [])
 
@@ -180,7 +196,6 @@ else:
                     else:
                         correct_ans = question_data.get('correct')
                         st.error(f"❌ **INCORRECT.** The correct answer was: **{correct_ans}**")
-            
             st.markdown("---")
 
     # Display final score metric after the quiz is submitted

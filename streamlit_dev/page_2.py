@@ -10,7 +10,6 @@ from api.sysp import system_prompt
 from api.functions import add_flashcard, add_flashcard_function
 import base64
 
-
 # Ensure the API key is set via secrets.toml or environment variable
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or st.secrets["GEMINI_API_KEY"]
 MODEL_NAME = 'gemini-2.5-flash'
@@ -24,6 +23,9 @@ final_score = ss.get('final_quiz_score')
 total_questions = ss.get('quiz_total_questions')
 failed_questions = ss.get('failed_questions')
 highest_score = ss.get('highest_score')
+
+# ✅ Detect whether quiz data exists (used to refresh chat session)
+has_quiz_data = final_score is not None
 
 def get_base64_of_bin_file(bin_file):
     """ Reads a binary file and returns its Base64 encoded string. """
@@ -43,8 +45,6 @@ except FileNotFoundError:
     st.warning("Avatar images not found. Using default emojis. Please add 'user_avatar.png' and 'bot_avatar.png'.")
 
 
-
-
 # --- Gemini Client Initialization and System Prompt ---
 if "client" not in ss:
     try:
@@ -61,57 +61,51 @@ def build_system_prompt():
     
     # 2. Quiz Performance Context
     if final_score is not None:
-        prompt += f"\nAnvändaren har nyligen genomfört ett ordförrådsquiz och fick {final_score} av {total_questions} ."
+        prompt += f"\n !!!IMPORTANT!!!! The user recently completed a QUIZ and scored {final_score} out of {total_questions}."
 
         if highest_score is not None and highest_score > 0:
-            prompt += f"Användarens bästa resultat hittills är {highest_score} av {total_questions}."
+            prompt += f"The user's best score so far is {highest_score} out of {total_questions}."
 
         # 3. Failed Questions for Targeted Help
         if failed_questions and len(failed_questions) > 0:
             failed_q_summary = StringIO()
-            failed_q_summary.write("Användaren hade problem med följande ord/frågor:\n")
+            failed_q_summary.write("The user had trouble with the following words/questions:\n")
             for i, q in enumerate(failed_questions):
-                failed_q_summary.write(f"  - Fråga: '{q.get('question')}' (Korrekt svar: {q.get('correct')}).\n")
+                failed_q_summary.write(f"  - Question: '{q.get('question')}' (Correct answer: {q.get('correct')}).\n")
             
-            prompt += "\nBerätta för användaren att du sett att den gjort en quiz och föreslå att hjälpa med de frågor användaren haft fel på! Viktigt!"
+            prompt += "\n !!! IMPORTANT !!!! Tell the user you noticed they took a quiz and suggest helping them with the questions they got wrong! Important!"
             prompt += failed_q_summary.getvalue()
         else:
-            prompt += "\nAnvändaren klarade alla frågor! Fokusera på att bygga vidare på deras kunskap."
+            prompt += "\nThe user got all the questions correct! Focus on building on their existing knowledge."
     else:
-        prompt += "\nAnvändaren har inte genomfört quizet ännu. Fokusera på allmän konversation och uppmuntra dem att ta quizet."
-        
+        prompt += "\nThe user has not taken the quiz yet. Focus on general conversation and encourage them to try the quiz."
+    
+    print(prompt.strip())
     return prompt.strip()
 
 # --- Chat Initialization ---
-
 system_prompt_text = build_system_prompt()
 ss.system_prompt = system_prompt_text
 
 if "messages" not in ss:
     print("Starting new chat session.")
-    # Build the system context at startup
     ss.messages = [] 
-
-    # Add the initial Harald greeting
     initial_greeting = "Hello! I'm Harald, your personal Swedish tutor. Would you like to have a conversation with me in Swedish? Or if you prefer, we could start by practicing some Swedish words and phrases together. What sounds good to you?"
     ss.messages.append({"role": "harald", "content": initial_greeting})
 
-if "chat_session" not in ss:
-    # Initialize the configuration with the stored system prompt
+# ✅ Rebuild chat session if not present OR quiz data is available
+if "chat_session" not in ss or has_quiz_data:
+    print("🔁 Rebuilding chat session with latest system prompt...")
     tools = Tool(function_declarations=[add_flashcard_function])
     config = GenerateContentConfig(
         system_instruction=ss.system_prompt,
         tools=[tools],
         temperature=0.3,
-        # You can add safety_settings here if you want:
-        # safety_settings=...
     )
-    
-    # Initialize the chat session
+
     ss.chat_session = ss.client.chats.create(
         model=MODEL_NAME,
         config=config, 
-        # Convert Streamlit history format to Gemini API format
         history=[
             {"role": "model" if msg["role"] == "harald" else "user", 
              "parts": [{"text": msg["content"]}]} 
@@ -119,10 +113,13 @@ if "chat_session" not in ss:
         ]
     )
 
+    # Optional confirmation in console
+    print("✅ ACTIVE SYSTEM PROMPT IN CHAT SESSION:")
+    print(ss.system_prompt[:500], "...")
 
-# --- CSS (Remains the same) ---
+
+# --- UI Styling ---
 st.markdown(
-    # ... (Your CSS style block) ...
     """
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Kanchenjunga:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap');
@@ -131,14 +128,14 @@ st.markdown(
         font-family: 'Libre Baskerville', serif;
         font-size: 100px;
         font-weight: 700;
-        color: rgba(0,0,0,0.5); /* make it light so chat is readable */
+        color: rgba(0,0,0,0.5);
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: -1;  /* behind everything */
-        pointer-events: none;  /* click through */
-        user-select: none;      /* prevent selection */
+        z-index: -1;
+        pointer-events: none;
+        user-select: none;
         text-align: center;
     }
     </style>
@@ -146,7 +143,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- Display History ---
+# --- Display Chat History ---
 for message in ss.messages:
     role = message["role"]
     avatar = bot_avatar if role == "harald" else user_avatar
@@ -179,7 +176,6 @@ if prompt := st.chat_input("Vad vill du fråga Harald?"):
         print(traceback.format_exc())
         full_response = f"Jag ber om ursäkt, ett fel uppstod vid kommunikationen: {e}"
         st.error(full_response)
-
 
     # 3. Display the full response from Harald
     with st.chat_message("assistant", avatar=bot_avatar):

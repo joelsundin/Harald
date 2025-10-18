@@ -25,6 +25,23 @@ st.markdown(
         background-size: 30%;
         background-repeat: no-repeat;
         background-position: bottom 50px right 100px;
+        background-attachment: fixed;
+
+    }}
+    /* Medium screens (tablets) */
+    @media (max-width: 1024px) {{
+        .stApp {{
+            background-size: 450px;
+            background-position: top 150px right 120px;
+        }}
+    }}
+
+    /* Small screens (phones) */
+    @media (max-width: 600px) {{
+        .stApp {{
+            background-size: 400px;
+            background-position: top 220px right 0px;
+        }}
     }}
 
     .big-text {{
