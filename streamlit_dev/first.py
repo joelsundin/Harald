@@ -8,8 +8,9 @@ from streamlit.runtime.scriptrunner import get_script_run_ctx
 
 def get_remote_ip() -> str:
     """Get remote ip."""
-    print("Getting remote IP: %s", st.context.ip_address)
-    return st.context.ip_address or "localhost"
+    ip = st.context.headers.get("X-Forwarded-For")
+    print("Getting remote IP: %s", ip)
+    return ip
 
 ss = st.session_state
 ss.storage = json_storage.JSONStorage(get_remote_ip())
