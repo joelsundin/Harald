@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.17)  18 OCT 2025 18:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.17)  19 OCT 2025 21:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -520,7 +520,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<cute_thinking_harald.png, id=31, 1413.28pt x 738.76pt>
+<cute_thinking_harald.png, id=63, 1413.28pt x 738.76pt>
 File: cute_thinking_harald.png Graphic file (type png)
 <use cute_thinking_harald.png>
 Package pdftex.def Info: cute_thinking_harald.png  used on input line 26.
@@ -537,15 +537,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 
+l.55 
       [1]
-
-LaTeX Warning: Empty `thebibliography' environment on input line 78.
+Overfull \hbox (3.56178pt too wide) in paragraph at lines 66--67
+\OT1/cmr/m/n/10 The over-all de-sign of the ap-pli-ca-tion fol-lows a mod-u-lar
+, multi-page ar-chi-tec-ture im-ple-mented in \OT1/cmtt/m/n/10 Streamlit\OT1/cm
+r/m/n/10 ,
+ []
 
 
 
 [2]
-runsystem(latexminted cleantemp  --timestamp 20251018183604 FAD58DE7366495DB465
+Overfull \hbox (23.49104pt too wide) in paragraph at lines 78--79
+\OT1/cmr/m/n/10 ap-pli-ca-tion in-ter-faces with Gem-ini through a \OT1/cmtt/m/
+n/10 genai.Client \OT1/cmr/m/n/10 in-stance, con-fig-ured with \OT1/cmtt/m/n/10
+ GenerateContentConfig
+ []
+
+
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+
+[4]
+
+[5]
+runsystem(latexminted cleantemp  --timestamp 20251019212800 FAD58DE7366495DB465
 0CFEFAC2FCD61)...disabled (restricted).
 
  (main.aux)
@@ -553,27 +574,38 @@ runsystem(latexminted cleantemp  --timestamp 20251018183604 FAD58DE7366495DB465
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3A3F02DA0D66D5B4051D955139F68CEA;773.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: F7BAAFFB792D6B4943592C9041D2A52F;2229
+(rerunfilecheck)             After:  B534AB39BBB0C503DF1A007C930DC5C0;2267.
  ) 
 Here is how much of TeX's memory you used:
- 15882 strings out of 468081
- 306902 string characters out of 5425788
- 830143 words of memory out of 5000000
- 44386 multiletter control sequences out of 15000+600000
- 630541 words of font info for 49 fonts, out of 8000000 for 9000
+ 15915 strings out of 468081
+ 307335 string characters out of 5425788
+ 832190 words of memory out of 5000000
+ 44403 multiletter control sequences out of 15000+600000
+ 631806 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,641b,529s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/sundi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb><C:/Users/sundi/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbxti10.pfb><C:/Users/sundi/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><C:/Users/sundi/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/sundi/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/sundi/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (3 pages, 1039818 bytes).
+ 75i,5n,79p,1110b,610s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\sundi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1000.pk><C:/Users/sundi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/sundi/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/sundi/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/sundi/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sundi/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/sundi/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/sundi/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users
+/sundi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+
+Output written on main.pdf (6 pages, 1093189 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
