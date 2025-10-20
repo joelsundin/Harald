@@ -41,8 +41,6 @@ Harald is implemented as a web-based application, allowing learners to access it
 
 The system’s web-based nature also facilitates easy updates and integration of new exercises or models, ensuring that learners always benefit from the latest functionality Harald has to offer. Overall, Harald provides a comprehensive, adaptive, and accessible environment for Swedish language learning, bridging the gap between traditional pedagogical methods and modern AI-assisted instruction.
 
-\subsection{Harald}
-
 \section{Dataset}
 
 The development of the Swedish language tutoring chatbot involved several iterations of dataset design and experimentation aimed at improving the model’s performance, naturalness, and pedagogical value. Over the course of the project, multiple datasets were constructed and evaluated, ranging from community-sourced linguistic discussions to synthetically generated dialogue data. Ultimately, however, the final system adopted a different strategy that relied on prompt engineering and curated conversational examples rather than direct fine-tuning. The main dataset iterations are described below.
@@ -78,8 +76,6 @@ The \textit{Flashcards page} serves as a lightweight review module, reinforcing 
 From a system perspective, all components are unified by the underlying LLM integration pattern. The application interfaces with Gemini through a \texttt{genai.Client} instance, configured with \texttt{GenerateContentConfig} objects that define system prompts, temperature settings, and tool availability. This modular prompt-building approach allows each page to construct specialized prompts suitable for its learning context (conversation, evaluation, summarization, etc.), while maintaining a consistent personality and tone, ensuring pedagogical consistency while allowing for functional diversity.
 
 The architectural design  in this project follows three key principles. First, \textit{context persistence}: the session state mechanism ensures that user data, learning history, and model context are retained across activities. Second, \textit{modular extensibility}: each learning component (chat, quiz, comprehension, flashcards) is implemented as an independent Streamlit page, making it straightforward to modify or extend functionality without affecting other modules. Third, \textit{adaptive personalization}: by feeding user performance data directly into the system prompts, the model dynamically adjusts its responses and focus areas to align with the learner’s evolving needs. Together, these principles enable a seamless integration of assessment, interaction, and reinforcement—transforming the LLM from a passive conversational agent into an active and context-aware tutor.
-
-\subsection{Previous Attempts}
 
 \section{Results}
 
@@ -120,7 +116,7 @@ The use of large language models (such as Gemini 2.5 Flash) has a strong influen
 The main benefit of Harald is improved accessibility and inclusion. Learners from different backgrounds can practice Swedish anytime without the need for expensive language courses or native-speaking tutors. This can support immigrants, students and professionals who want to integrate into Swedish society more easily. The chatbot also improves educational efficiency offering instant corrections, feedback and explanations in simple English. It encourages personalized learning allowing users to progress at their own pace and supports the democratization of knowledge by making language learning resources available to a wider audience.
 
 \subsection{Negative Implications}
-However there are several potential risks to be addressed. Since Harald uses the Gemini model, it relies on a pre-trained dataset that we do not have any control over. This means potential biases, inaccuracies or cultural insensitivities from the training data can surface in responses. The only adjustable parameter is the system prompt, which helps guide the model’s tone and focus but it might not be effective in all edge cases. There are also parameters which restricts harmful and hateful dialogues but inspite of all these techniques it is difficult to guarantee perfect accuracy or fairness in all interactions. There are also privacy concerns because users might share personal details in their messages. This requires careful data handling and protection. Another risk is that users could become too dependent on the chatbot or overconfident on AI-generated responses and use it instead of real conversations with people. In addition using large models like Gemini has an environmental cost, since it requires high energy use for both training and running the model.
+However, there are several potential risks to be addressed. Since Harald uses the Gemini model, it relies on a pre-trained dataset that we do not have any control over. This means potential biases, inaccuracies or cultural insensitivities from the training data can surface in responses. The only adjustable parameter is the system prompt, which helps guide the model’s tone and focus but it might not be effective in all edge cases. There are also parameters which restrict harmful and hateful dialogues but inspite of all these techniques it is difficult to guarantee perfect accuracy or fairness in all interactions. There are also privacy concerns because users might share personal details in their messages. This requires careful data handling and protection. Another risk is that users could become too dependent on the chatbot or overconfident on AI-generated responses and use it instead of real conversations with people. In addition using large models like Gemini has an environmental cost, since it requires high energy use for both training and running the model.
 
 \subsection{Ethical Considerations and Mitigation}
 To manage these issues the system should be transparent about being an AI and not a real teacher. Users should understand that it may not always be correct or unbiased. The system prompts should be regularly updated to make the responses more reliable and human reviews can help check for mistakes or bias. Personal information should be anonymized or removed and data storage should follow privacy regulations. Using smaller or optimized versions of the model can also help lower the environmental impact.
@@ -130,7 +126,7 @@ While Harald highlights the educational and social benefits of integrating LLMs 
 \hfill \break
 \textit{\textbf{Use of generative AI}}
 
-Generative AI was used for formatting the text for writing this report. It was also used to create examples chatbot conversation to use as system prompts for making the chatbot accessible and personlized,
+Generative AI was used for formatting the text for writing this report. It was also used to create example chatbot conversation to use as system prompts for making the chatbot accessible and personlized.
 
 
 \hfill \break
@@ -141,6 +137,9 @@ Generative AI was used for formatting the text for writing this report. It was a
 \bibitem{google_gemini}
 Google AI. \textit{Gemini API Text Generation Documentation.} 
 Available at: \url{https://ai.google.dev/gemini-api/docs/text-generation}
+
+\bibitem{gemini_functions}
+Google AI. \textit{Function calling with the Gemini API.} Available at: \url{https://ai.google.dev/gemini-api/docs/function-calling}
 
 \end{thebibliography}
 
